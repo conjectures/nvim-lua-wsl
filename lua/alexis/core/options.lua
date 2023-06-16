@@ -39,6 +39,7 @@ opt.clipboard:append("unnamedplus")
 -- https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 30
+vim.g.netrw_liststyle = 3 -- open in tree mode
 --
 -- split windows
 --opt.splitright = true

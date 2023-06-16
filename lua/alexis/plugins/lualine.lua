@@ -3,13 +3,6 @@ if not status then
     return 
 end
 
--- local lualine_codedark = require("lualine.themes.codedark")
-
--- lualine.setup({
---     options = {
---         theme = lualine_codedark
---     }
--- })
 
 -- based on evil_lualine
 -- https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
@@ -159,14 +152,16 @@ ins_right {
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
   color = { fg = colors.green, gui = 'bold' },
 }
+
 ins_right {
   'branch',
   icon = '',
   color = { fg = colors.violet, gui = 'bold' },
 }
+
+
 ins_right {
   'diff',
-  -- Is it me or the symbol for modified us really weird
   symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
@@ -175,6 +170,7 @@ ins_right {
   },
   cond = conditions.hide_in_width,
 }
+
 ins_right{
   -- mode component
   function()
