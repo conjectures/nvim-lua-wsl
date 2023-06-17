@@ -61,7 +61,7 @@ return packer.startup(function(use)
 
     -- formatting 
     use("tpope/vim-surround")
-    
+
     -- completion
     use("hrsh7th/nvim-cmp") -- completion plugin
     use("hrsh7th/cmp-buffer") -- source for text in buffer
@@ -76,8 +76,7 @@ return packer.startup(function(use)
     use("williamboman/mason-lspconfig.nvim")                -- lspconfig interface for mason 
     use("neovim/nvim-lspconfig")                            -- lsp
     use("hrsh7th/cmp-nvim-lsp")                             -- lspconfig interface for cmp autocompletion
-
-    
+    use({"glepnir/lspsaga.nvim", branch = "main"})
 
     -- treesitter
     use({
@@ -93,8 +92,6 @@ return packer.startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     })
-
-
 
     -- git integration
     use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side

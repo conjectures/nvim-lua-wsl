@@ -33,11 +33,13 @@ https://github.com/nvim-telescope/telescope.nvim
 - LSP
     - Mason     + 
     - lspconfig + 
-    - lspsaga
+    - lspsaga +
     - lspkind
     - snippet engine
 
 - Treesitter
+    - markdown
+    - markdown inline parser
 
 - gitsigns + 
 - diffview +

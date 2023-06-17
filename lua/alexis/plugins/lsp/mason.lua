@@ -10,23 +10,20 @@ if not mason_lspconfig_ok then
     return
 end
 
--- 
-
 mason.setup()
 
 mason_lspconfig.setup({
     ensure_installed = {
-        "bashls",
-        "dockerls",
         "gopls",
         "lua_ls",
         "jedi_language_server",
         "terraformls",
-        "yamlls",
-
-    }
+        -- "dockerls",
+        -- "bash-language-server",
+        -- "yamlls",
         -- "rust_analyzer",
         -- "ansiblels",
         -- "azure_pipeline_ls",
+    },
 
 })

@@ -12,5 +12,7 @@ require("alexis.plugins.diffview")
 require("alexis.plugins.telescope")
 
 require("alexis.plugins.lsp.mason")
+require("alexis.plugins.lsp.lspsaga")
 require("alexis.plugins.lsp.lspconfig")
+
 
