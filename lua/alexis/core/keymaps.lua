@@ -37,7 +37,17 @@ keymap("v", ">", ">gv", opts)
 
 -- Nerd-tree
 keymap("n", "-", ":NvimTreeToggle<CR>", opts)
+-- OpenBrowser
+keymap("n", "gx", '<Plug>(openbrowser-smart-search)', { silent = true})
+keymap("v", "gx", '<Plug>(openbrowser-smart-search)', { silent = true})
+keymap("v", "gs", '<Plug>(openbrowser-search)', { silent = true})
 
+-- Telescope
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
 
 -- netrw generates too many empty buffers

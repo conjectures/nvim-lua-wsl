@@ -1,11 +1,13 @@
 # Nvim Lua configs
 
 ## Requirements
-- True color terminal 
-- Neovim v0.9
-- Nerd Font
+- True color terminal ([Alacritty](Alacritty), ixterm2, etc )
+- [neovim](Neovim ) >=v0.9
+- Nerd Font 
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Setup
+Clone repository in `.config` directory
 
 ### Keybindings
 If some keybindings do not work, it may be that they are OS predefined shortcuts.
@@ -24,9 +26,20 @@ key_bindings:
 
 ## Todo
 
-
-- Telescope
+- Telescope +
 https://github.com/nvim-telescope/telescope.nvim
+- ripgrep + 
 
 - LSP
+    - Mason     + 
+    - lspconfig + 
+    - lspsaga
+    - lspkind
+    - snippet engine
+
 - Treesitter
+
+- gitsigns + 
+- diffview +
+
+- openbrowser +

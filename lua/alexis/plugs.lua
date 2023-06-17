@@ -53,6 +53,8 @@ return packer.startup(function(use)
 
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
+    use("tyru/open-browser.vim")
+    use("tyru/open-browser-github.vim")
 
     -- statusline
     use("nvim-lualine/lualine.nvim")
@@ -65,8 +67,18 @@ return packer.startup(function(use)
     use("hrsh7th/cmp-buffer") -- source for text in buffer
     use("hrsh7th/cmp-path") -- source for file system paths
 
-    --
+    -- fuzzy finder
+    use({ "nvim-telescope/telescope.nvim", tag = '0.1.1', requires = { {"nvim-lua/plenary.nvim"}} })
+    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make"})
+
     -- lsp
+    use({"williamboman/mason.nvim", build = ":MasonUpdate"})-- manage lsp servers
+    use("williamboman/mason-lspconfig.nvim")                -- lspconfig interface for mason 
+    use("neovim/nvim-lspconfig")                            -- lsp
+    use("hrsh7th/cmp-nvim-lsp")                             -- lspconfig interface for cmp autocompletion
+
+    
+
     -- treesitter
     use({
         "nvim-treesitter/nvim-treesitter",
@@ -84,10 +96,14 @@ return packer.startup(function(use)
 
 
 
-    -- git
+    -- git integration
+    use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+    use("sindrets/diffview.nvim")
+    
 
 
     if packer_bootstrap then
         require("packer").sync()
     end
 end)
+
