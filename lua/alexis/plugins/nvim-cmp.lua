@@ -5,6 +5,13 @@ if not cmp_status then
     return
 end
 
+local luasnip_ok, luasnip = pcall(require, "luasnip")
+if not luasnip_ok then
+    return
+end
+
+require("luasnip/loaders/from_vscode").lazy_load()
+
 vim.opt.completeopt = "menu,menuone,noselect"
 
 local kind_icons = {
@@ -36,12 +43,16 @@ local kind_icons = {
 }
 
 cmp.setup({
+    snippet = {
+        expand = function(args)
+        luasnip.lsp_expand(args.body)
+        end,
+    },
     --
     -- view = {
     --     entries = {name = 'native' }
     -- },
 
-        
     mapping = cmp.mapping.preset.insert({
         ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), {"i", "c"}),
         ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), {"i", "c"}),
@@ -59,6 +70,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = "nvim_lsp"},
+        { name = "luasnip"},
         { name = "buffer" },
         { name = "path" },
     }),

@@ -35,11 +35,16 @@ https://github.com/nvim-telescope/telescope.nvim
     - lspconfig + 
     - lspsaga +
     - lspkind
-    - snippet engine
+    - snippet engine + 
+    - servers 
+        - python + 
+        - golang + 
+        - lua +
+        - terraform
 
 - Treesitter
-    - markdown
-    - markdown inline parser
+    - markdown                  +
+    - markdown inline parser    +
 
 - gitsigns + 
 - diffview +

@@ -21,8 +21,8 @@ vim.cmd([[
 ]])
 
 -- Protectred call to avoid error on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
+local packer_ok, packer = pcall(require, "packer")
+if not packer_ok then
   return
 end
 
@@ -66,6 +66,11 @@ return packer.startup(function(use)
     use("hrsh7th/nvim-cmp") -- completion plugin
     use("hrsh7th/cmp-buffer") -- source for text in buffer
     use("hrsh7th/cmp-path") -- source for file system paths
+    --
+    -- snippets
+    use("L3MON4D3/LuaSnip")
+    use("saadparwaiz1/cmp_luasnip")
+    use("rafamadriz/friendly-snippets")
 
     -- fuzzy finder
     use({ "nvim-telescope/telescope.nvim", tag = '0.1.1', requires = { {"nvim-lua/plenary.nvim"}} })
@@ -96,8 +101,6 @@ return packer.startup(function(use)
     -- git integration
     use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
     use("sindrets/diffview.nvim")
-    
-
 
     if packer_bootstrap then
         require("packer").sync()
