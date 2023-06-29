@@ -22,7 +22,9 @@ treesitter.setup({
         "python",
         "go",
         "terraform",
+        "hcl"
     },
     auto_install = true,
 
 })
+vim.treesitter.language.add('terraform', 'tfvars')

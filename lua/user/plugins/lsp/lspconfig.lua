@@ -53,3 +53,6 @@ lspconfig["lua_ls"].setup({
 lspconfig["jedi_language_server"].setup{}
 lspconfig["gopls"].setup{}
 
+-- Terraform setup
+lspconfig["terraformls"].setup{}
+-- vim.api.nvim_create_autocmd({"BufWritePre"}, { pattern = {"*.tf", "*.tfvars"}, callback = vim.lsp.buf.format(), })

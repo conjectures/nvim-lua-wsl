@@ -11,7 +11,7 @@ require('kanagawa').setup({
                     bg_gutter = "none"
                 }
             }
-        }           
+        }
     }
 })
 
@@ -19,7 +19,7 @@ require('kanagawa').setup({
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
     vim.notify("colorscheme " .. colorscheme .. " not found!")
-    return 
+    return
 end
 
 -- vim.cmd("colorscheme kanagawa")

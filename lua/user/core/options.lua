@@ -1,6 +1,7 @@
 
 local opt = vim.opt
 
+local utils = require('user.core.utils')
 
 
 -- line numbers
@@ -44,5 +45,13 @@ vim.g.netrw_liststyle = 3 -- open in tree mode
 -- split windows
 --opt.splitright = true
 --opt.splitbelow = true
---
 --opt.iskeyword:append("-") -- make dash part of word
+
+
+-- utils.create_augroup({
+--     {'BufNewFile','BufReadPost', '*.tfvars', 'set', 'filetype=hcl'}
+-- }, 'BufE')
+
+vim.filetype.add({ extension = { tfvars = "hcl" } })
+
+
