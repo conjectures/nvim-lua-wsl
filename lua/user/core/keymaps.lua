@@ -49,6 +49,10 @@ keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
+keymap("n", "<leader>fd", "<cmd>Telescope diff diff_current<CR>", opts)
+keymap("n", "<leader>fD", "<cmd>Telescope diff diff_files<CR>", opts)
+-- keymap("n", "<leader>fd", "<cmd>Telescope help_tags<CR>", opts)
+
 
 -- netrw generates too many empty buffers
 -- -- Netrw mappings
