@@ -37,6 +37,9 @@ telescope.setup({
     extensions = {
 
     },
+    find_files = {
+        hidden = true
+    }
 })
 
 telescope.load_extension("fzf")
