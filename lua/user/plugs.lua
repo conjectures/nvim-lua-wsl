@@ -73,7 +73,7 @@ return packer.startup(function(use)
     use("rafamadriz/friendly-snippets")
 
     -- fuzzy finder
-    use({ "nvim-telescope/telescope.nvim", tag = '0.1.1', requires = { {"nvim-lua/plenary.nvim"}} })
+    use({ "nvim-telescope/telescope.nvim", tag = '0.1.4', requires = { {"nvim-lua/plenary.nvim"}} })
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make"})
     use({ "jemag/telescope-diff.nvim", requires = { { "nvim-telescope/telescope.nvim"}}})
 

@@ -22,8 +22,8 @@ treesitter.setup({
         "python",
         "go",
         "terraform",
-        "hcl"
-        "make",
+        "hcl",
+        "make"
     },
     auto_install = true,
 
