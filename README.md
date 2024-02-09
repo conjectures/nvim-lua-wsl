@@ -5,6 +5,7 @@
 - [neovim](Neovim ) >=v0.9
 - Nerd Font 
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+- build-essential 
 
 ## Setup
 Clone repository in `.config` directory
@@ -41,6 +42,8 @@ https://github.com/nvim-telescope/telescope.nvim
         - golang + 
         - lua +
         - terraform
+        - powershell (windows)
+        - azure-pipelines (windows)
 
 - Treesitter
     - markdown                  +

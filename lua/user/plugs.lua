@@ -82,7 +82,7 @@ return packer.startup(function(use)
     use("williamboman/mason-lspconfig.nvim")                -- lspconfig interface for mason 
     use("neovim/nvim-lspconfig")                            -- lsp
     use("hrsh7th/cmp-nvim-lsp")                             -- lspconfig interface for cmp autocompletion
-    use({"glepnir/lspsaga.nvim", branch = "main"})
+    use({"nvimdev/lspsaga.nvim", branch = "main"})
 
     -- treesitter
     use({

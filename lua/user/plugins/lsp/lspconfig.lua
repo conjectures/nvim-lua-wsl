@@ -50,9 +50,27 @@ lspconfig["lua_ls"].setup({
     },
 })
 
-lspconfig["jedi_language_server"].setup{}
-lspconfig["gopls"].setup{}
+lspconfig["azure_pipelines_ls"].setup{
+  settings = {
+      yaml = {
+          schemas = {
+              ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+                  "/azure-pipeline*.y*l",
+                  "/*.azure*",
+                  "Azure-Pipelines/**/*.y*l",
+                  "Pipelines/*.y*l",
+                  "az*pipeline.y*l",
+              },
+          },
+      },
+  },
+}
 
--- Terraform setup
-lspconfig["terraformls"].setup{}
+lspconfig["powershell_es"].setup{}
+
+-- lspconfig["jedi_language_server"].setup{}
+-- lspconfig["gopls"].setup{}
+-- 
+-- -- Terraform setup
+-- lspconfig["terraformls"].setup{}
 -- vim.api.nvim_create_autocmd({"BufWritePre"}, { pattern = {"*.tf", "*.tfvars"}, callback = vim.lsp.buf.format(), })

@@ -14,16 +14,17 @@ mason.setup()
 
 mason_lspconfig.setup({
     ensure_installed = {
-        "gopls",
+        -- "gopls",
         "lua_ls",
-        "jedi_language_server",
-        "terraformls",
+        -- "jedi_language_server",
+        -- "terraformls",
         -- "dockerls",
         -- "bash-language-server",
         -- "yamlls",
         -- "rust_analyzer",
         -- "ansiblels",
-        -- "azure_pipeline_ls",
+        "azure_pipelines_ls",
+        "powershell_es",
     },
 
 })
