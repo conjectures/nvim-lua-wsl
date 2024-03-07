@@ -66,7 +66,10 @@ lspconfig["azure_pipelines_ls"].setup{
   },
 }
 
-lspconfig["powershell_es"].setup{}
+-- lspconfig["powershell_es"].setup{
+--     bundle_path = '',
+--     settings = { powershell = { codeFormatting = { Preset = 'OTBS'}}}
+-- }
 
 -- lspconfig["jedi_language_server"].setup{}
 -- lspconfig["gopls"].setup{}

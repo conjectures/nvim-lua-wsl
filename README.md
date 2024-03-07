@@ -1,7 +1,7 @@
 # Nvim Lua configs
 
 ## Requirements
-- True color terminal ([Alacritty](Alacritty), ixterm2, etc )
+- True color terminal (Terminal)
 - [neovim](Neovim ) >=v0.9
 - Nerd Font 
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -11,10 +11,10 @@
 Clone repository in `.config` directory
 
 ### Keybindings
-If some keybindings do not work, it may be that they are OS predefined shortcuts.
+Some keybindings may not work in macOS due to predefined shortcuts.
 
 In macos, remove the shortcut `Ctrl+Space` from the keyboard settings menu.
-Additionally, if Alacritty terminal emulator is used, add these lines to the configuration file:
+If Alacritty terminal emulator is used, add these lines to the configuration file:
 ```yaml
 # alacritty.yaml
 key_bindings:
@@ -26,30 +26,5 @@ key_bindings:
 - https://github.com/josean-dev/dev-environment-files/
 
 ## Todo
+- copilot
 
-- Telescope +
-https://github.com/nvim-telescope/telescope.nvim
-- ripgrep + 
-
-- LSP
-    - Mason     + 
-    - lspconfig + 
-    - lspsaga +
-    - lspkind
-    - snippet engine + 
-    - servers 
-        - python + 
-        - golang + 
-        - lua +
-        - terraform
-        - powershell (windows)
-        - azure-pipelines (windows)
-
-- Treesitter
-    - markdown                  +
-    - markdown inline parser    +
-
-- gitsigns + 
-- diffview +
-
-- openbrowser +

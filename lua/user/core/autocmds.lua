@@ -7,13 +7,13 @@ local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 
 
 
-vim.b.clip = '/mnt/c/Windows/System32/clip.exe'
-if vim.fn.executable(vim.b.clip) == 1 then
+vim.w.clip = '/mnt/c/Windows/System32/clip.exe'
+if vim.fn.executable(vim.w.clip) == 1 then
 
     augroup('WSLYank', { clear = true})
     autocmd('TextYankPost', {
         group = 'WSLYank',
-        command = "if v:event.operator ==# 'y' | call system(b:clip, @0) | endif"
+        command = "if v:event.operator ==# 'y' | call system(w:clip, @0) | endif"
     })
 end
 
