@@ -14,6 +14,9 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
+-- formatoptions
+opt.formatoptions:remove({ 'r', 'o' })
+
 -- line wrapping
 opt.wrap = false
 

@@ -6,6 +6,7 @@
 - Nerd Font 
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - build-essential 
+- node runtime  >=v18.x 
 
 ## Setup
 Clone repository in `.config` directory
